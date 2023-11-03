@@ -1,0 +1,17 @@
+.footer_pro{
+    display: flex;
+}
+.prev,
+.next{
+    cursor: pointer;
+    width: 26.7px;
+    height: 26.7px;
+    background-color: #eceaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.img_footer_prod{
+    display: flex;
+}

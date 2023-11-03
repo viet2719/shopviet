@@ -1,0 +1,38 @@
+.list_product_header{
+    display: flex;
+    justify-content: space-between;
+}
+.list_product{
+    width: 100%;
+   
+}
+.option{
+    font-size: 16px;
+    font-weight: 400;
+    select{
+        width: 200px;
+        height: 40px;
+        cursor: pointer;
+       
+    }
+}
+.lists{
+    margin-top: 20px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    button{
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        color: #b8b7b7;
+    }
+}
+.pagination .active{
+    color: black;
+}

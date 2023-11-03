@@ -1,0 +1,63 @@
+.footer_content{
+    display: flex;
+    padding: 25px 0;
+    color: #fff;
+    width: 100%;
+    gap: 20px;
+}
+.footer_footer{
+    background: #2a2a86;
+    width: 100%;
+}
+.footer_bottom{
+    text-align: center;
+    color: #fff;
+    padding-bottom: 16px;
+    font-size: 13px
+}
+.divider{
+    border-bottom: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+}
+.tiitle_menu{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.li_menu{
+    font-size: 14px;
+    margin: 5px 5px;
+    cursor: pointer;
+}
+.li_menu:hover{
+    color: orange;
+}
+.contact_company{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+}
+.ct_address_hover:hover,
+.ct_phone_hover:hover,
+.ct_tele_hover:hover,
+.ct_complain_hover:hover,
+.ct_email_hover:hover{
+    color: orange;
+    cursor: pointer;
+}
+.icon_contact{
+    display: flex;
+    justify-content: center;
+    margin: 20px ;
+    gap: 15px;
+}
+.imgSrc{
+    cursor: pointer;
+}
+.imgSrc:hover{
+    animation: iconRotate 0.6s;
+}
+@keyframes iconRotate {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(30deg);}
+  }

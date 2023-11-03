@@ -1,0 +1,40 @@
+:root {
+    --mauNenKhungTieuDe: #fff0f0;
+    --mauChuKhungTieuDe: #212b35;
+    --mauNenKhung: #fff0f0;
+    --mauChuDanhSachSanPham: #212b35;
+    --mauIconCheckbox: #ff4d4d;
+    --mauDuongKePhanBiet: #dfe4e8;
+    --mauChuXemThem: #ff4d4d;
+    --mauGiaGocSanPham: #a6aaae;
+    --mauGiaGiamGia: #ff4d4d;
+    --mauNenKhungPhienBanVaSoLuongMua: #fff;
+    --mauChuKhungPhienBanVaSoLuongMua: #596068;
+    --mauNenLabel: #ffe5e5;
+    --mauChuLabel: #ff4d4d;
+    --mauNenKhungDuoiCung: #fff0f0;
+    --mauChuTongTien: #212b35;
+    --mauChuTongGiamGia: #ff4d4d;
+    --mauNenNutThemGioHang: #ff4d4d;
+    --mauChuNutThemGioHang: #ffffff;
+}
+
+.imgpro{
+    border-radius: 5px;
+}
+.fapro:hover .imgpro{
+    transform: scale(1.09);
+}
+.children-content{
+    padding-top: 98px;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: 820px 1fr;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    column-gap: 20px;
+}
+.divider{
+    border-bottom: 1px solid #ccc;
+}
