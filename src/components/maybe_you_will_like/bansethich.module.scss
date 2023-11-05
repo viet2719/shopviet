@@ -1,0 +1,33 @@
+.ins_web_smart_recommender_header{
+    font-family: inherit;
+    font-size: 16px;
+    color: #000000;
+    margin: 20px 0;
+    color: rgb(225, 61, 61) !important;
+    font-weight: 600;
+}
+.ins_web_smart_recommender_box_item{
+    display: flex;
+    flex-direction: column;
+    width: 165px;
+}
+.ins_web_smart_recommender_body_wrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+.next,
+.prev{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black
+}
+.btn_buy_now{
+    border-color: rgb(252, 175, 23) !important;
+    background:#ffc107 ;
+    color: #fff;
+    height: 32px;
+    border-radius: 4px;
+}

@@ -16,6 +16,9 @@ function BasicExample() {
   const handlepropose = () => {
     router.push("/propose");
   };
+  const handleCart = () => {
+    router.push("/cart");
+  };
 
   return (
     <div className={styles.header}>
@@ -96,7 +99,9 @@ function BasicExample() {
           ))}
         </div>
         <div className={styles.topbar_bottom_right}>
-          <div className={styles.cart}>GIỎ HÀNG</div>
+          <div className={styles.cart} onClick={handleCart}>
+            GIỎ HÀNG
+          </div>
           <div className={styles.user}>
             <div className={styles.logandsing} onClick={handleRegister}>
               ĐĂNG KÝ{" "}

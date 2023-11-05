@@ -11,6 +11,10 @@ import { faUserShield } from "@fortawesome/free-solid-svg-icons/faUserShield";
 import { faTruck } from "@fortawesome/free-solid-svg-icons/faTruck";
 import { faRepeat } from "@fortawesome/free-solid-svg-icons/faRepeat";
 import { faClock } from "@fortawesome/free-solid-svg-icons/faClock";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons/faChevronUp";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
+import Bansethich from "@/components/maybe_you_will_like/bansethich";
+import Rates from "@/components/rate/rate";
 function Chitietsanpham() {
   const [quantity, setQuantity] = useState(1);
   const handleReduce = () => {
@@ -23,8 +27,9 @@ function Chitietsanpham() {
   };
   return (
     <div className={`container ${styles.mb_20}`}>
-      <div>
-        <h4>Áo khoác nữ</h4> / <span>Áo Khoác Phao Nữ Siêu Nhẹ Siêu Ấm</span>
+      <div className={styles.breadcrumb}>
+        <h4 className={styles.mr_lr}>Áo khoác nữ</h4> &nbsp;/&nbsp;
+        <strong>Áo Khoác Phao Nữ Siêu Nhẹ Siêu Ấm</strong>
       </div>
       <div className="product-grid">
         <div className="product-grid-item-image">
@@ -49,6 +54,54 @@ function Chitietsanpham() {
                 </div>
               </div>
             </div>
+          </div>
+          {/*  */}
+          <div className="divider"></div>
+          {/* hướng dẫn sử dụng */}
+          <div>
+            <div className={styles.toggle_text}>
+              <h2 className={styles.text_title}>Hướng dẫn sử dụng</h2>
+              <FontAwesomeIcon icon={faChevronUp} />
+              <FontAwesomeIcon icon={faChevronDown} />
+            </div>
+            <div>
+              <div>
+                <span className={styles.d_lg_block}>
+                  Hướng dẫn sử dụng chung:
+                </span>
+                <ul className={styles.hd_su_dung}>
+                  <li>
+                    Giặt máy chế độ nhẹ với sản phẩm cùng màu ở nhiệt độ thường
+                  </li>
+                  <li>Không giặt chung với các vật sắc nhọn</li>
+                  <li>Không sử dụng chất tẩy rửa</li>
+                  <li>Không ngâm lâu sản phẩm với các chất có tính tẩy rửa</li>
+                  <li>Sử dụng xà phòng trung tính</li>
+                  <li>
+                    Lộn trái và phơi bằng móc trong bóng râm, tránh ánh nắng
+                    trực tiếp
+                  </li>
+                  <li>Là ủi ở mức 1, Nhiệt độ dưới 110 độ C</li>
+                  <li>Không là lên chi tiết trang trí</li>
+                </ul>
+              </div>
+              <div>
+                <span className={styles.d_lg_block}>
+                  Hướng dẫn sử dụng với sản phẩm phụ kiện giày, túi xách:
+                </span>
+                <ul className={styles.hd_su_dung}>
+                  <li>Bảo quản nơi khô ráo</li>
+                  <li>Không ngâm trong nước</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="divider"></div>
+          <div>
+            <Bansethich />
+          </div>
+          <div>
+            <Rates />
           </div>
         </div>
         <div className="product-grid-item-info details-pro">

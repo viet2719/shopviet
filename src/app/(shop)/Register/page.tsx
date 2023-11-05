@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Register.module.scss";
 import Image from "next/image";
 import Head from "next/head";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Register() {
   const router = useRouter();

@@ -46,7 +46,7 @@
     opacity: 0.7;
 }
 .mb_20{
-    margin-bottom:20px ;
+   margin: 50px auto;
 }
 .payment_policy_wrapper .pdp_thong_tin .icon{
     display: flex;
@@ -59,6 +59,8 @@
 }
 .property_outstanding{
     padding: 19px 12px;
+    font-size: 18px;
+    color: #000;
 
 }
 .accordion_panel{
@@ -78,4 +80,46 @@
     padding-left: 25px;
     margin-bottom: 0;
     position: relative;
+}
+.mr_lr{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    cursor: pointer;
+}
+.mr_lr:hover{
+    color: #fcaf17;
+}
+.breadcrumb{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.toggle_text{
+    justify-content: space-between;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.text_title{
+    font-size: 18px;
+
+}
+.hd_su_dung{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 40px;
+}
+.hd_su_dung li{
+    list-style: disc;
+}
+.d_lg_block{
+    color: #000;
+    // font-family: SVN-Gilroy;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
 }
