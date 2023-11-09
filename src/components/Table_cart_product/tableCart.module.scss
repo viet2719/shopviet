@@ -1,0 +1,46 @@
+.product{
+    display: flex;
+    gap: 20px;
+}
+.quantity{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+    .sub,
+    .add{
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ccc;
+        background: #fafafa;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .number{
+        display: flex;
+        width: 30px;
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+    }
+}
+.sub{
+    border-radius: 4px 0px 0px 4px;
+    border-left: none ;
+}
+.add{
+    border-radius: 0 4px 4px 0;
+    border-right: none;
+}
+.money_del{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: flex-end;
+}
+.delete_prod_order{
+    cursor: pointer;
+}

@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons/faChevronLeft";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
 import Footerproduct from "../footerproduct/footerproduct";
-
+import { useRouter } from "next/navigation";
 function Previewdanhmuc() {
+  const router = useRouter();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const product = [
@@ -225,8 +226,18 @@ function Previewdanhmuc() {
                           src={pro.imageProduct}
                           width={220}
                           preview={false}
+                          onClick={() => {
+                            router.push("/chitietsanpham");
+                          }}
                         />
-                        <p className={styles.name_product}>{pro.nameProduct}</p>
+                        <p
+                          className={styles.name_product}
+                          onClick={() => {
+                            router.push("/chitietsanpham");
+                          }}
+                        >
+                          {pro.nameProduct}
+                        </p>
                         <span className={styles.price}>{pro.price}</span>
 
                         <div className={`${styles.list_product} `}>

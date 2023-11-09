@@ -1,0 +1,45 @@
+.breadcrumb{
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: #000;
+    gap: 10px;
+}
+.last{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+   font-weight: bold;
+}
+.tabs_title{
+    display: flex;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 15px 0;
+    li{
+        line-height: 38px;
+        padding: 0 24px;
+        border: 1px #fcaf17 solid;
+        border-radius: 4px;
+        margin: 0 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+.tabs_title li:hover{
+    border-color: #fcaf17;
+    background: #fcaf17;
+    color: #fff;
+}
+.active{
+    border-color: #fcaf17;
+    background: #fcaf17;
+    color: #fff;
+}
+.item_2:hover,
+.item_1:hover{
+    cursor: pointer;
+    color: #fcaf17;
+}

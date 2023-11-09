@@ -3,7 +3,9 @@ import styles from "./donhang.module.scss";
 import { Badge, Image } from "antd";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons/faChevronLeft";
+import { useRouter } from "next/navigation";
 function Donhang() {
+  const router = useRouter();
   return (
     <div>
       <div className={styles.sidebar__header}>
@@ -60,7 +62,12 @@ function Donhang() {
                 <span>5672436523465723</span>
               </div>
               <div className={styles.order_block}>
-                <span className={styles.back}>
+                <span
+                  className={styles.back}
+                  onClick={() => {
+                    router.push("/cart");
+                  }}
+                >
                   <FontAwesomeIcon icon={faChevronLeft} />
                   Quay về giỏ hàng
                 </span>

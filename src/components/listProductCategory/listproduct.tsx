@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import styles from "./listproduct.module.scss";
 import { Image } from "antd";
-import x from "../../app/propose/propose.module.scss";
+import x from "@/app/(shop)/propose/propose.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 import Footerproduct from "../footerproduct/footerproduct";

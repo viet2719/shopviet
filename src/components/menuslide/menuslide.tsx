@@ -5,8 +5,10 @@ import { male, female, children } from "./data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons/faChevronLeft";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons/faChevronRight";
+import { useRouter } from "next/navigation";
 
 function Menuslide() {
+  const router = useRouter();
   const [activeItem, setActiveItem] = useState("male");
   const [startIndex, setStartIndex] = useState(0);
   let id = 8;
@@ -45,7 +47,13 @@ function Menuslide() {
             <FontAwesomeIcon icon={faChevronLeft} />
           </button>
           {visibleItems.map((item, index) => (
-            <div key={index} className={styles.item}>
+            <div
+              key={index}
+              className={styles.item}
+              onClick={() => {
+                router.push("/productCategory");
+              }}
+            >
               <div>
                 <Image
                   width={90}

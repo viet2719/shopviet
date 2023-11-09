@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons/faStar";
 import { useRouter } from "next/navigation";
 import Footerproduct from "@/components/footerproduct/footerproduct";
+import TitleProductCategory from "@/components/tiltleProductCategory/TitleProductCategory";
 function Propose() {
   const router = useRouter();
   const handleClick = () => {
@@ -211,6 +212,7 @@ function Propose() {
     <div className="container">
       <div className={styles.tab_title__ajax}>
         <h4 className={styles.title_block}>ĐỀ XUẤT CHO BẠN</h4>
+
         <div className={styles.tab_desktop}>
           <ul className={styles.tab_title}>
             {title.map((item, index) => (

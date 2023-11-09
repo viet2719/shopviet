@@ -5,6 +5,11 @@ import { Input, Image } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { listdanhmuc } from "./listDanhmuc";
 import { useRouter } from "next/navigation";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-regular-svg-icons/faUser";
+import { faBagShopping } from "@fortawesome/free-solid-svg-icons/faBagShopping";
+import BtnCart from "../btnCart/btnCart";
+
 function BasicExample() {
   const router = useRouter();
   const handleLogin = () => {
@@ -31,7 +36,12 @@ function BasicExample() {
             <Input suffix={<SearchOutlined />} placeholder="Tìm kiếm" />
           </div>
 
-          <div className={styles.location}>
+          <div
+            className={styles.location}
+            onClick={() => {
+              router.push("/hethongcuahang");
+            }}
+          >
             <Image
               preview={false}
               alt="phanh"
@@ -99,10 +109,10 @@ function BasicExample() {
           ))}
         </div>
         <div className={styles.topbar_bottom_right}>
-          <div className={styles.cart} onClick={handleCart}>
-            GIỎ HÀNG
-          </div>
+          <BtnCart />
+
           <div className={styles.user}>
+            <FontAwesomeIcon icon={faUser} />
             <div className={styles.logandsing} onClick={handleRegister}>
               ĐĂNG KÝ{" "}
             </div>

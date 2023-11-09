@@ -1,0 +1,94 @@
+.row{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+    .item{
+        display: flex;
+        flex-direction: column;
+        span{
+            font-size: 16px;
+            
+        }
+        
+        b{
+            font-size: 40px;
+            font-weight: initial;
+            font-family: 'SVN-Gilroy Bold';
+            line-height: 1;
+        }
+        margin-bottom: 30px;
+        padding: 25px 30px;
+        color: #FFF;
+        border-radius: 4px;
+        background-position: right 30px bottom;
+    }
+}
+.item_1{
+    background-color: #089E29;
+    background-image: url("/icon/cuahang.svg");
+    background-repeat: no-repeat;
+}
+.item_2{
+    background-color: #FCAF17;
+    background-image: url("/icon/nhamay.svg");
+    background-repeat: no-repeat;
+}
+.item_3{
+    background-color: #22215B;
+    background-image: url("/icon/city.svg");
+    background-repeat: no-repeat;
+}
+.item_4{
+    background-color: #006BCD;
+    background-image: url("/icon/vanphong.svg");
+    background-repeat: no-repeat;
+}
+.item_5{
+    background-color: #EE4D2D;
+    background-image: url("/icon/nhansu.svg");
+    background-repeat: no-repeat;
+}
+#map{
+    float: left;
+    width: 1170px;
+    margin-bottom: 60px;
+    max-width: calc(66.667% - 15px);
+}
+#map iframe{
+    width: 100%;
+    height: 616px;
+    vertical-align: top;
+}
+.map_list{
+    display: flex;
+    gap: 85px;
+}
+.list_add{
+    .title{
+        display: flex;
+        gap: 20px;
+        background-color: #ccc;
+        padding:  20px 10px;
+        border-radius: 4px 4px 0 0;
+    }
+}
+.item{
+    display: none;
+}
+.list_store{
+    border: 1px solid #ccc;
+    height: 100vh;
+}
+.list_store_item{
+    overflow-y: scroll;
+    width: 100%;
+}
+.list_store_item::-webkit-scrollbar{
+    display: none;
+}
+.counter{
+    font-size: 40px !important;
+    font-weight: initial;
+    line-height: 1;
+}
