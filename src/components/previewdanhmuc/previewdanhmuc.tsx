@@ -225,6 +225,7 @@ function Previewdanhmuc() {
                           className="imgpro"
                           src={pro.imageProduct}
                           width={220}
+                          alt="mat roi"
                           preview={false}
                           onClick={() => {
                             router.push("/chitietsanpham");
