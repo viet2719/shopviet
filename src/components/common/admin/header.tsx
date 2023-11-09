@@ -7,7 +7,7 @@ function Header() {
     <div>
       <div className={styles.logo_admin}>
         <FontAwesomeIcon style={{ width: 40, height: 44 }} icon={faShop} />
-        SHOPVIET
+        SHOPVIETdfsdfadfasdf
       </div>
       <div className={styles.logo_admin_right}></div>
     </div>
