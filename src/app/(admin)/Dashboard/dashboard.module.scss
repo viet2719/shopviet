@@ -1,0 +1,36 @@
+
+.dashboard{
+    margin:  20px;
+}
+.board{
+    background: #fff;
+    padding: 10px;
+}
+.panel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.panel_heading{
+    margin-bottom: 20px;
+}
+.panel_body ul{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.panel_body ul li{
+    list-style: none;
+    border: 1px solid #CCC;
+   padding: 5px 10px;
+
+}
+.panel_table{
+    margin: 20px 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.panel_body{
+    border: 1px solid #CCC;
+}

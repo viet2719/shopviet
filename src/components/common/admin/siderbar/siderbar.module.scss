@@ -1,0 +1,39 @@
+.wrapper{
+    width: 100%;
+    display: flex;
+    margin-top: 64px;
+}
+.navbar_sider{
+    width: 260px;
+    position: fixed;
+    background: #333333;
+    color: #b8b8b8;
+    height: 100vh;
+}
+.page_wrapper{
+    width: 100%;
+    margin-left: 260px;
+    background: #ededed;
+} 
+.navbar_sider ul{
+    margin: 0;
+    padding: 0;
+}
+.navbar_sider ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.navbar_sider ul li:hover{
+    background: #6d6c6c;
+    color: #f36a5a;
+}
+.active{
+    color: #f36a5a;
+    background: #ededed;
+}
+.active:hover{
+    color: #f36a5a;
+    background: #ededed !important; 
+}
