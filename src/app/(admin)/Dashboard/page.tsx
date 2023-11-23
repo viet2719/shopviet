@@ -12,6 +12,7 @@ import { faEarthAmericas } from "@fortawesome/free-solid-svg-icons/faEarthAmeric
 import Table from "react-bootstrap/Table";
 import axios from "axios";
 import useSWR from "swr";
+
 interface Item {
   id: number;
   quantity: number;
@@ -27,10 +28,12 @@ interface TaskPanelItem {
 }
 
 interface MongoDataItem {
-  id: number;
-  username: string;
+  _id: string;
+  userName: string;
   password: string;
-  gmail: string;
+  email: string;
+  createdAt: string;
+  role: string;
 }
 export default function Dashboard() {
   const itemOver = [
@@ -96,16 +99,23 @@ export default function Dashboard() {
       time: "3 phút trước",
     },
   ];
-  const fetcher = (url: string) => fetch(url).then((r) => r.json());
-  const { data, error, isLoading } = useSWR(
-    " http://localhost:8000/api/account",
-    fetcher,
-    {
-      revalidateIfStale: false,
-      revalidateOnFocus: false,
-      revalidateOnReconnect: false,
-    }
-  );
+
+  // const [datas, setData] = useState({ users: [] });
+  const [datas, setData] = useState<{ users: MongoDataItem[] }>({ users: [] });
+  useEffect(() => {
+    const fecthData = async () => {
+      const { data } = await axios.get("http://localhost:8000/api/users");
+      setData(data);
+    };
+    fecthData();
+  }, []);
+  const maxNewUsersToShow = 6;
+  const newUsers = datas.users
+    .sort(
+      (a, b) =>
+        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    )
+    .slice(0, maxNewUsersToShow);
 
   return (
     <div className={styles.dashboard}>
@@ -145,34 +155,24 @@ export default function Dashboard() {
               Tài khoản đăng ký gần đây
             </div>
             <div className={styles.panel_body}>
-              {isLoading ? (
-                <p>Loading...</p>
-              ) : error ? (
-                <p>Error loading data</p>
-              ) : data && Array.isArray(data) && data.length > 0 ? (
-                <Table striped bordered hover variant="dark">
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>User Name</th>
-                      <th>Gmail</th>
-                      <th>Password</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.map((item: MongoDataItem) => (
-                      <tr key={item.id}>
-                        <td>{item.id}</td>
-                        <td>{item.username}</td>
-                        <td>{item.gmail}</td>
-                        <td>{item.password}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              ) : (
-                <p>No data available</p>
-              )}
+              <Table striped bordered hover variant="dark">
+                <thead>
+                  <tr>
+                    <th>User Name</th>
+                    <th>Gmail</th>
+                    <th>Times</th>
+                    <th>Role</th>
+                  </tr>
+                </thead>
+                {newUsers.map((item: MongoDataItem) => (
+                  <tr key={item._id} style={{ color: "black" }}>
+                    <td>{item.userName}</td>
+                    <td>{item.email}</td>
+                    <td>{item.createdAt}</td>
+                    <td>{item.role}</td>
+                  </tr>
+                ))}
+              </Table>
             </div>
           </div>
         </div>
