@@ -42,12 +42,17 @@ const SiderBar: React.FC<SiderBarProps> = ({
     {
       id: 5,
       title: "Thống kê đơn hàng",
-      link: "thongkedonhang",
+      link: "/thongkedonhang",
     },
     {
       id: 6,
       title: "Quản lý tài khoản",
-      link: "quanlytaikhoan",
+      link: "/quanlytaikhoan",
+    },
+    {
+      id: 7,
+      title: "Cài đặt Slide",
+      link: "/slide",
     },
   ];
   useEffect(() => {

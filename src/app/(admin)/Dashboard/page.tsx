@@ -110,13 +110,13 @@ export default function Dashboard() {
     fecthData();
   }, []);
   const maxNewUsersToShow = 6;
-  const newUsers = datas.users
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-    )
-    .slice(0, maxNewUsersToShow);
-
+  const newUsers = datas.users.sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+  );
+  // .slice(0, maxNewUsersToShow);
+  const newMembers = newUsers.filter(
+    (item: MongoDataItem) => item.role === "member"
+  );
   return (
     <div className={styles.dashboard}>
       <div className="row">
@@ -164,7 +164,7 @@ export default function Dashboard() {
                     <th>Role</th>
                   </tr>
                 </thead>
-                {newUsers.map((item: MongoDataItem) => (
+                {newMembers.map((item: MongoDataItem) => (
                   <tr key={item._id} style={{ color: "black" }}>
                     <td>{item.userName}</td>
                     <td>{item.email}</td>
